@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body ::selection {
+  background-color: yellow;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: #555;
+}
+.content {
+  text-align: center;
+  box-shadow: inset 2px 2px 10px 6px grey;
+  padding: 20px 0px;
+}
+.content h3 {
+  font-size: 35px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: goldenrod;
+  font-weight: bold;
+}
+.carousel-item img {
+  width: 100vw;
+  height: 100vh;
+}
+.carousel-caption {
+  top: 60% !important;
+  left: 50% !important;
+  color: lightcyan;
+  width: 700px;
+  background-color: rgba(1, 1, 1, 0.7);
+  transform: translateX(-50%) translateY(-60%);
+  animation: show 1s ease-in forwards;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+@media (min-width:501px) and (max-width:800px) {
+    .carousel-caption {
+        width: 450px;
+    }
+}
+
+@media (max-width:500px) {
+    .carousel-caption {
+        width: 300px;
+    }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-300px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-60%) translateX(-50%);
+  }
+}
+.slide2 .carousel-control-next,
+.carousel-control-prev {
+  width: 80px;
+  height: 80px;
+  background-color: gray;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slide2 .carousel-control-next:hover {
+  background-color: goldenrod;
+}
+.slide2 .carousel-control-prev:hover {
+  background-color: goldenrod;
+}
+.slide2 .carousel-indicators li {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.slide2 .carousel-indicators li:hover {
+  background-color: goldenrod;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #607d8b;
+  color: #fff;
+  padding: 10px 10px 0 0;
+  margin-top: 50px;
+}
+footer ul {
+  display: flex;
+}
+footer i {
+  align-items: center;
+  color: goldenrod;
+}
+footer ul li {
+  margin-left: 16px;
+  list-style: none;
+}
+footer p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-size: 14px;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  footer {
+    flex-direction: column;
+  }
+  footer p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer ul li {
+    margin: 0 8px;
+  }
+}
